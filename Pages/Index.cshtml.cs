@@ -7,6 +7,9 @@ namespace RTSVolunteerSystem.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public String volunteerEmail = "";
+        public String volunteerFullname = "";
+        public String volunteerId = "";
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -18,6 +21,16 @@ namespace RTSVolunteerSystem.Pages
             if (cookieemail != null)
             {
                 volunteerEmail = cookieemail;
+            }
+            String cookiefullname = Request.Cookies["fullname"];
+            if (cookiefullname != null)
+            {
+                volunteerFullname = cookiefullname;
+            }
+            String cookieid = Request.Cookies["id"];
+            if (cookieid != null)
+            {
+                volunteerId = cookieid;
             }
         }
     }

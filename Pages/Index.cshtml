@@ -5,14 +5,55 @@
 }
 
 <div class="text-center">
+	<img src="https://img1.wsimg.com/isteam/ip/6d7a0cef-f68c-47a0-90e0-9f924f9cad49/305836954_508312234631062_4200570191462638155_.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1240,h:1240,cg:true" height=300/>
     <h1 class="display-4">Welcome 
 
 	@if (Model.volunteerEmail.Length > 0)
 	{
-		<strong>@Model.volunteerEmail</strong>		
-	}
+			<strong>@Model.volunteerFullname</strong>
+		}
 	</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
 	
 </div>
 
+<ul>
+	<li>
+		<h2>Standard User</h2>
+		<ul>
+			<li>
+				<a href='/Register/Index'>Register</a>
+			</li>
+			<li>
+				<a href='/Login/Index'>Login</a>
+			</li>
+			<li>
+				<a href='/LogHours/Index'>Log Hours</a>
+			</li>
+			<li>
+				<a href='/Logout/Index'>Logout</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>
+		<h2>Admin User</h2>
+		<ul>
+			<li>
+				<a href='/Teams/Create'>Add Teams</a>
+			</li>
+			<li>
+				<a href='/Volunteers/Index'>Reports - Volunteers</a>
+			</li>
+			<li>
+				<a href='/Teams/Index'>Reports - Teams</a>
+			</li>
+			<li>
+				<a href='/Reports/VolunteerHours'>Reports - Hours</a>
+			</li>
+
+		</ul>
+	</li>
+</ul>

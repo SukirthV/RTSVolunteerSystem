@@ -1,0 +1,68 @@
+﻿@page
+@model RTSVolunteerSystem.Pages.LogHours.IndexModel
+@{
+}
+
+<br />
+<h2>Log Hours</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+	<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+		<strong>@Model.errorMessage</strong>
+		<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+	</div>
+}
+<form method="POST">
+	<input type="hidden" name="volunteerid" value="@Model.hoursInfo.volunteerid">
+	<div class="row mb=3">
+		<label class="col-sm-3 col-form-label">Date</label>
+		<div class="col-sm-6">
+			<input type="date" class="form-control" name="date" value="@Model.hoursInfo.date" />
+		</div>
+	</div>
+	<div class="row mb=3">
+		<label class="col-sm-3 col-form-label">Team Name</label>
+		<div class="col-sm-6">
+			<select runat="server" id="teamnameselect" name="teamname" value="@Model.hoursInfo.teamname">
+			<option value="Events">Events</option>
+			<option value="FOOD">FOOD</option>
+			<option value="sports">sports</option>
+			</select>
+		</div>
+	</div>
+	<div class="row mb=3">
+		<label class="col-sm-3 col-form-label">Number of Hours</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="hours" value="@Model.hoursInfo.hours" />
+		</div>
+	</div>
+	<div class="row mb=3">
+		<label class="col-sm-3 col-form-label">Description</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="description" value="@Model.hoursInfo.description" />
+		</div>
+	</div>
+
+
+	@if (Model.successMessage.Length > 0)
+	{
+		<div class="row mb-3">
+			<div class="col-sm-9">
+				<div class='alert alert-success alert-dismissible fade show' role='alert'>
+					<strong>@Model.successMessage</strong>
+					<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+				</div>
+			</div>
+		</div>
+	}
+
+	<div class="row mb-3">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="/Index" role="button">Cancel</a>
+		</div>
+	</div>
+</form>

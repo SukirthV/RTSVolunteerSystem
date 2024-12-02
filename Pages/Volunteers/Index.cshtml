@@ -21,6 +21,8 @@
             <th>Available From</th>
             <th>Available To</th>
             <th>Comments</th>
+            <th>Actions</th>
+
         </tr>
     </thead>
     <tbody>
@@ -39,10 +41,10 @@
                 <td>@item.availablefrom</td>
                 <td>@item.availableto</td>
                 <td>@item.comments</td>
-                <!--<td>
+                <td>
                     <a class="btn btn-primary btn-sm" href="/Volunteers/Edit?id=@item.id">Edit</a>
                     <a class="btn btn-danger btn-sm" href="/Volunteers/Delete?id=@item.id">Delete</a>
-                </td> -->
+                </td>
             </tr>
         }
     </tbody>

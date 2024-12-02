@@ -11,6 +11,14 @@ namespace RTSVolunteerSystem.Pages.Logout
             {
                 Response.Cookies.Delete("email");
             }
+            if (Request.Cookies["fullname"] != null)
+            {
+                Response.Cookies.Delete("fullname");
+            }
+            if (Request.Cookies["id"] != null)
+            {
+                Response.Cookies.Delete("id");
+            }
 
             Response.Redirect("/Index");
         }

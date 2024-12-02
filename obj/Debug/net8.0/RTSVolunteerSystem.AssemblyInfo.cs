@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RTSVolunteerSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e26663b334c2cd25d00016a42ad5529bbfbd4f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("RTSVolunteerSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RTSVolunteerSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
